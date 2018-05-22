@@ -1,1 +1,2 @@
-# Simple http server
+# Simple web application
+Based on https://golang.org/doc/articles/wiki/
