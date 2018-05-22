@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
+		http.Redirect(res, req, "/view/FrontPage", http.StatusFound)
+	})
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
